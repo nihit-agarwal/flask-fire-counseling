@@ -1,0 +1,108 @@
+/* Apply styles to the form elements */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+select[multiple] {
+  height: auto;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Apply styles to the radio buttons */
+
+input[type="radio"] {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+input[type="radio"] + label {
+  display: inline-block;
+  font-weight: normal;
+  margin-right: 15px;
+}
+
+/* Apply styles to the headings */
+
+h4 {
+  font-size: 18px;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Apply styles to the preferences section */
+
+label:not(:first-child) {
+  margin-top: 5px;
+}
+
+/* Apply styles to the options section */
+
+select[name^="b_"] {
+  margin-bottom: 10px;
+}
+
+/* Apply styles to the old IITs section */
+
+input[type="radio"] + label {
+  margin-right: 15px;
+}
+
+/* Apply styles to the error messages */
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}

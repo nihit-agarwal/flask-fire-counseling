@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counselling Support</title>
+    <link rel="stylesheet" href="formStyles.css">
+
+</head>
+<body>
+    <h1> Counselling Simplified</h1>
+    <! Form for accepting user information>
+    <form action="/options" method="post">
+        <! Accepting all ranks>
+        <br>
+        <label>Enter CRL rank: </label>
+        <input type="number" placeholder="CRL rank" name="crlRank">
+        <br>
+        <label>Enter Category rank: </label>
+        <input type="number" placeholder="Category rank" name="catRank">
+        <br>
+        <label>Enter PwD rank: </label>
+        <input type="number" placeholder="PwD rank" name="pRank">
+        <br>
+
+        <!Determining user category for best results>
+        <br>
+        <label>Choose Category: </label>
+        <select name = "category">
+            {%for cat in categories:%}
+            <option value={{cat}}> {{cat}} </option>
+            {% endfor %}
+        </select>
+        <br>
+
+        <!Determining user gender for best results>
+        <br>
+        <label>Gender:</label>
+        <br>
+        <input type="radio" id="gen0" name="Gender" value="N" checked>
+        <label for="gen0">Gender-Neutral</label><br>
+        <input type="radio" id="gen1" name="Gender" value="F">
+        <label for="gen1">Female Only</label><br>
+        <br>
+
+        <! Acquiring user preferences>
+        <h4>Preferences:</h4>
+
+        <label>Old IITs:</label>
+        <br>
+        <input type="radio" id="oldYes" name="oldIIT" value="Y">
+        <label for="oldYes">Preferred</label><br>
+        <input type="radio" id="oldNo" name="oldIIT" value="N" checked>
+        <label for="oldNo">Don't Care</label><br>
+
+        <br>
+        College:
+        <br>
+        {%for c in c_indices:%}
+        <label>{{c[-1]}}</label>
+        <select id = 'college{{c[-1]}}' name={{c}}>
+            {%for college,code in colleges:%}
+            <option value={{code}}>{{college}}</option>
+            {% endfor %}
+        </select>
+        <br>
+        {% endfor %}
+        <br>
+
+        <br>
+        Branch:
+        <br>
+        {%for branch in b_indices:%}
+        <label>{{branch[-1]}}</label>
+        <select name = {{ branch }}>
+            {%for course,code in courses:%}
+            <option value={{code}}> {{course}} </option>
+            {% endfor %}
+        </select>
+        <br>
+        {% endfor %}
+        <br>
+
+
+
+
+        <br>
+        <button type="submit">Find my options</button>
+        <div id="debug"></div>
+    </form>
+
+
+<script src="action.js"></script>
+</body>
+</html>

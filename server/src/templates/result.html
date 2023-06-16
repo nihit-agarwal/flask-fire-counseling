@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Options</title>
+    <link rel="stylesheet" href="resultStyles.css">
+</head>
+<body>
+    <h1>Your Options</h1>
+    The left and right tables contains branch stream combinations with indicators of chance of obtaining
+    a seat in each option. In the right table, your preferences have been highlighted with the following
+    color scheme:
+     <h2>Color Scheme</h2>
+  <table class = 'color-scheme-table'>
+    <tr>
+      <th>Color Significance</th>
+      <th>Color Sample</th>
+    </tr>
+    <tr>
+      <td>Preferred College and Branch</td>
+      <td class="color-sample" style="background-color: green;"></td>
+    </tr>
+    <tr>
+      <td>Preferred College</td>
+      <td class="color-sample" style="background-color: lightblue;"></td>
+    </tr>
+    <tr>
+      <td>Preferred Branch</td>
+      <td class="color-sample" style="background-color: yellow;"></td>
+    </tr>
+    <!-- Add more rows for additional colors -->
+  </table>
+    <div class="container">
+        <div class="left-section">
+            <!-- Content for the left section goes here -->
+            <h3>List of possible options ordered according to historical preferences: </h3>
+            <!nav class="Default">
+                <table>
+                    <tr>
+                        <th>College</th>
+                        <th>Branch</th>
+                        <th>Worst Case</th>
+                        <th>Average Case</th>
+                        <th>Lucky!</th>
+                    </tr>
+                    {% for item in options: %}
+                    <tr>
+                        <td>{{item[0]}}</td>
+                        <td>{{item[1]}}</td>
+                        <td>{{item[4][0]}}</td>
+                        <td>{{item[3]}}</td>
+                        <td>{{item[4][1]}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            <!/nav>
+    </div>
+        <div class="right-section">
+            <!-- Content for the right section goes here -->
+            <h3>Modified order of options based on preferences</h3>
+            <!nav class="Default">
+            <table>
+                    <tr>
+                        <th>College</th>
+                        <th>Branch</th>
+                        <th>Worst Case</th>
+                        <th>Average Case</th>
+                        <th>Lucky!</th>
+                    </tr>
+                    {% for item in sList: %}
+                    {% set color_class = item[6] %}
+                    <tr class = {{color_class}}>
+                        <td>{{item[0]}}</td>
+                        <td>{{item[1]}}</td>
+                        <td>{{item[4][0]}}</td>
+                        <td>{{item[3]}}</td>
+                        <td>{{item[4][1]}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            <!/nav>
+        </div>
+  </div>
+
+</body>
+</html>
