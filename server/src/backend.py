@@ -145,11 +145,11 @@ def custom_order(options: list, branches: list, colleges: list):
         if p <= 0.25:
             color = None
         elif p <= 0.5:
-            color = 'mint-green'
+            color = 'pistachio'
         elif p <= 0.75:
-            color = 'sea-green'
+            color = 'mint'
         else:
-            color = 'olive-green'
+            color = 'chartreuse'
         b_options[i].append(color)
     return b_options
 
