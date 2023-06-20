@@ -115,7 +115,7 @@ tr:nth-child(even) {
 
 .color-scale {
   position: relative;
-  width: 100%;
+  width: 40%;
   height: 50px;
   background: linear-gradient(to right, transparent, mintgreen, seagreen, olivedrab);
 }
