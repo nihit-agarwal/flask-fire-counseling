@@ -117,7 +117,7 @@ tr.chartreuse {
   position: relative;
   width: 40%;
   height: 50px;
-  background-image: linear-gradient(90deg, #ffffff 25%, #B2C3D2 25%, #99EDC3 25%,
+  background-image: linear-gradient(90deg, #ffffff 25%, #B2C3D2 25%, #ffffff 25%,
                     #B0FC38 25%);
 }
 
