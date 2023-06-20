@@ -111,8 +111,8 @@ def custom_order(options: list, branches: list, colleges: list):
     :return: a new ordered list based on preferences
     """
     b_options = copy.deepcopy(options)
-    for opt in b_options:
-        opt.append('')
+    # for opt in b_options:
+    #     opt.append('')
     score = 0.1
     for i in colleges:
         if i == '':
@@ -120,7 +120,8 @@ def custom_order(options: list, branches: list, colleges: list):
         for j in range(len(b_options)):
             if i == b_options[j][2][:3]:
                 b_options[j][5] = b_options[j][5] * score
-                b_options[j][-1] = '*'
+                # b_options[j][-1] = '*'
+                b_options[j][0] += ' **'
         score += 0.1
 
     score = 0.5
@@ -131,10 +132,11 @@ def custom_order(options: list, branches: list, colleges: list):
         for j in range(len(b_options)):
             if i == b_options[j][2][3:]:
                 b_options[j][5] *= score
-                if b_options[j][-1] == '*':
-                    b_options[j][-1] = '*#'
-                elif not b_options[j][-1]:
-                    b_options[j][-1] = '#'
+                # if b_options[j][-1] == '*':
+                #     b_options[j][-1] = '*#'
+                # elif not b_options[j][-1]:
+                #     b_options[j][-1] = '#'
+                b_options[j][1] += ' **'
         score += 0.1
 
     b_options.sort(key=lambda x: x[5])

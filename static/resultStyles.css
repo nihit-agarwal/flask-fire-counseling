@@ -51,20 +51,6 @@ h2 {
   margin-bottom: 10px;
 }
 
-.preference-scheme-table {
-  width: 25%;
-
-  border-collapse: separate;
-}
-
-.preference-scheme-table th,
-.preference-scheme-table td {
-  padding: 10px;
-  text-align: center;
-}
-
-
-
 
 .left-section h3 {
   font-size: 20px;
