@@ -120,7 +120,7 @@ def custom_order(options: list, branches: list, colleges: list):
         for j in range(len(b_options)):
             if i == b_options[j][2][:3]:
                 b_options[j][5] = b_options[j][5] * score
-                b_options[j][-1] = 'C'
+                b_options[j][-1] = '*'
         score += 0.1
 
     score = 0.5
@@ -131,10 +131,10 @@ def custom_order(options: list, branches: list, colleges: list):
         for j in range(len(b_options)):
             if i == b_options[j][2][3:]:
                 b_options[j][5] *= score
-                if b_options[j][-1] == 'C':
-                    b_options[j][-1] = 'CB'
+                if b_options[j][-1] == '*':
+                    b_options[j][-1] = '*#'
                 elif not b_options[j][-1]:
-                    b_options[j][-1] = 'B'
+                    b_options[j][-1] = '#'
         score += 0.1
 
     b_options.sort(key=lambda x: x[5])
