@@ -53,10 +53,10 @@
                         <th>Lucky!</th>
                     </tr>
                     {% for item in sList: %}
-                    {% set color_class = item[7] %}
+                    {% set color_class = item[6] %}
                     <tr class = {{color_class}}>
                         <td>{{item[0]}}</td>
-                        <td>{{item[1] + " " + item[6]}}</td>
+                        <td>{{item[1]}}</td>
                         <td>{{item[4][0]}}</td>
                         <td>{{item[3]}}</td>
                         <td>{{item[4][1]}}</td>
