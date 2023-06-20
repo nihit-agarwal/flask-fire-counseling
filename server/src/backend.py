@@ -151,7 +151,7 @@ def survival_predict(gender, case, rank, category):
     :return: tuple of (survival probability, lower bound, upper bound)
     """
     fname = f'{gender}-{case}-{category}'
-    file = open(f'Data/prob/{fname}', 'rb')
+    file = open(f'Data/probExp/{fname}', 'rb')
     try:
         kmf = pickle.load(file)
     except:
