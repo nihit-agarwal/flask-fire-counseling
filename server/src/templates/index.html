@@ -13,13 +13,13 @@
         <! Accepting all ranks>
         <br>
         <label>Enter CRL rank: </label>
-        <input type="number" placeholder="CRL rank" name="crlRank">
+        <input type="number" placeholder="CRL rank" name="crlRank" pattern="[1-9]\d*" min="1" required title="Please enter a valid rank">
         <br>
         <label>Enter Category rank: </label>
-        <input type="number" placeholder="Category rank" name="catRank">
+        <input type="number" placeholder="Category rank" name="catRank" pattern="[1-9]\d*" min="1"  title="Please enter a valid rank">
         <br>
         <label>Enter PwD rank: </label>
-        <input type="number" placeholder="PwD rank" name="pRank">
+        <input type="number" placeholder="PwD rank" name="pRank" pattern="[1-9]\d*" min="1"  title="Please enter a valid rank">
         <br>
 
         <!Determining user category for best results>
