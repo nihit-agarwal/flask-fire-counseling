@@ -109,7 +109,6 @@ input[type="radio"] + label {
 
 
 .subscription {
-  position: absolute;
   right: 20px;
   bottom: 20px;
   font-size: 12px;
