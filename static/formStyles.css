@@ -113,4 +113,6 @@ input[type="radio"] + label {
   bottom: 20px;
   font-size: 12px;
   color: #999;
+  border: 2px solid black;
+  padding: 10px;
 }
